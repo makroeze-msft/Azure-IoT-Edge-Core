@@ -12,6 +12,9 @@ extern crate serde;
 extern crate serde_json;
 extern crate url;
 
+#[macro_use]
+extern crate log;
+
 pub mod apis;
 pub mod models;
 pub mod utils;

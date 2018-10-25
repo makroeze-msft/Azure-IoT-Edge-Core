@@ -17,7 +17,7 @@ use futures::{Future, Stream};
 use hyper;
 use serde_json;
 
-use hyper::header::UserAgent;
+use hyper::header2::UserAgent;
 
 use super::{configuration, Error};
 
@@ -475,9 +475,9 @@ impl<C: hyper::client::Connect> ContainerApi for ContainerApiClient<C> {
         }
 
         let serialized = serde_json::to_string(&body).unwrap();
-        req.headers_mut().set(hyper::header::ContentType::json());
+        req.headers_mut().set(hyper::header2::ContentType::json());
         req.headers_mut()
-            .set(hyper::header::ContentLength(serialized.len() as u64));
+            .set(hyper::header2::ContentLength(serialized.len() as u64));
         req.set_body(serialized);
 
         // send request
@@ -1353,9 +1353,9 @@ impl<C: hyper::client::Connect> ContainerApi for ContainerApiClient<C> {
         }
 
         let serialized = serde_json::to_string(&update).unwrap();
-        req.headers_mut().set(hyper::header::ContentType::json());
+        req.headers_mut().set(hyper::header2::ContentType::json());
         req.headers_mut()
-            .set(hyper::header::ContentLength(serialized.len() as u64));
+            .set(hyper::header2::ContentLength(serialized.len() as u64));
         req.set_body(serialized);
 
         // send request
@@ -1473,9 +1473,9 @@ impl<C: hyper::client::Connect> ContainerApi for ContainerApiClient<C> {
         }
 
         let serialized = serde_json::to_string(&input_stream).unwrap();
-        req.headers_mut().set(hyper::header::ContentType::json());
+        req.headers_mut().set(hyper::header2::ContentType::json());
         req.headers_mut()
-            .set(hyper::header::ContentLength(serialized.len() as u64));
+            .set(hyper::header2::ContentLength(serialized.len() as u64));
         req.set_body(serialized);
 
         // send request

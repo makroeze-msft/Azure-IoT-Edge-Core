@@ -7,7 +7,7 @@ use chrono::{DateTime, Duration, Utc};
 use futures::future::{self, Either};
 use futures::{Future, Stream};
 use hyper::client::Service;
-use hyper::header::{Authorization, ContentLength, ContentType, IfMatch, UserAgent};
+use hyper::header2::{Authorization, ContentLength, ContentType, IfMatch, UserAgent};
 use hyper::{Error as HyperError, Method, Request, Response, Uri};
 use serde::{de::DeserializeOwned, Serialize};
 use serde_json;

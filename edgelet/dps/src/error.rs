@@ -6,7 +6,7 @@ use std::fmt::Display;
 use base64::DecodeError;
 use failure::{Backtrace, Context, Fail};
 use serde_json::Error as SerdeError;
-use tokio_timer::TimerError as TokioError;
+use tokio_timer::Error as TokioError;
 
 use edgelet_core::Error as CoreError;
 use edgelet_http::{Error as HttpError, ErrorKind as HttpErrorKind};

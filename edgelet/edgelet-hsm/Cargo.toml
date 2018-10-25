@@ -4,8 +4,8 @@ version = "0.1.0"
 authors = ["Azure IoT Edge Devs"]
 
 [dependencies]
-bytes = "0.4"
-failure = "0.1"
+bytes = {path = "../../../bytes"}
+failure = {path = "../../../failure"}
 
 edgelet-core = { path = "../edgelet-core"}
 hsm = { path = "../hsm-rs"}

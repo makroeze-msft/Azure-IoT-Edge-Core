@@ -4,10 +4,10 @@ version = "0.1.0"
 authors = ["Azure IoT Edge Devs"]
 
 [dependencies]
-failure = "0.1"
+failure = {path = "../../../failure"}
 failure_derive = "0.1"
 log = "0.4"
-nix = "0.10"
+nix = {path = "../../../nix"}
 
 [dev-dependencies]
 lazy_static = "1.0"

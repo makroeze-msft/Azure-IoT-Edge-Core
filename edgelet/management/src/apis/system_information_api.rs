@@ -17,7 +17,7 @@ use futures::{Future, Stream};
 use hyper;
 use serde_json;
 
-use hyper::header::{Authorization, UserAgent};
+use hyper::header2::{Authorization, UserAgent};
 
 use super::{configuration, Error};
 

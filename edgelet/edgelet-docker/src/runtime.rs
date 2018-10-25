@@ -148,7 +148,7 @@ impl ModuleRegistry for DockerModuleRuntime {
     }
 }
 
-impl ModuleRuntime for DockerModuleRuntime {
+impl ModuleRuntime for DockerModuleRuntime { 
     type Error = Error;
     type Config = DockerConfig;
     type Module = DockerModule<UrlConnector>;
@@ -196,7 +196,7 @@ impl ModuleRuntime for DockerModuleRuntime {
                 future::Either::A(fut)
             })
             .unwrap_or_else(|| future::Either::B(future::ok(())));
-
+            
         Box::new(created)
     }
 
